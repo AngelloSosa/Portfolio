@@ -351,33 +351,45 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="projects">
-        <div className="container">
-          <h2 className="section-title">Proyectos Destacados</h2>
-          <div className="projects-grid">
-            {portfolioData.projects.map(project => (
-              <div key={project.id} className="project-card">
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                  <div className="project-overlay">
-                    <button className="btn btn-primary">Ver Proyecto</button>
-                  </div>
-                </div>
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-tech">
-                    {project.tech.map((tech, index) => (
-                      <span key={index} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+{/* Projects Section */}
+<section id="projects" className="projects">
+  <div className="container">
+    <h2 className="section-title">Proyectos Destacados</h2>
+    <div className="projects-grid">
+      {portfolioData.projects.map((project) => (
+        <div key={project.id} className="project-card">
+          <div className="project-image">
+            <img src={project.image} alt={project.title} />
+            <div className="project-overlay">
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  if (project.link && project.link !== "#") {
+                    window.open(project.link, "_blank", "noopener,noreferrer");
+                  }
+                }}
+              >
+                Ver Proyecto
+              </button>
+            </div>
+          </div>
+          <div className="project-content">
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+            <div className="project-tech">
+              {project.tech.map((tech, index) => (
+                <span key={index} className="tech-tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="contact">
