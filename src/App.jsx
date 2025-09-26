@@ -26,6 +26,14 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 
+// Import images
+import avatarImage from './assets/avatar.png'
+import alquilafacilLogo from './assets/logos/alquilafacil-logo.png'
+import ezgasLogo from './assets/logos/ezgas-logo.png'
+import sweetmanagerLogo from './assets/logos/sweetmanager-logo.png'
+import ecomoveLogo from './assets/logos/ecomove-logo.png'
+import safevisionLogo from './assets/logos/safevision-logo.png'
+
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -64,7 +72,7 @@ function App() {
         id: 1,
         title: "AlquilaFacil",
         description: "Una solución moderna de alquiler de espacios para eventos, construida con Vue.js y .NET",
-        image: "src/assets/logos/alquilafacil-logo.png",
+        image: alquilafacilLogo,
         tech: ["Vue", ".NET", "Tailwind"],
         link: "https://alquilaez.netlify.app/sign-in"
       },
@@ -72,7 +80,7 @@ function App() {
         id: 2,
         title: "EzGas",
         description: "Aplicación en Python + Flask para localizar estaciones de servicio cercanas",
-        image: "src/assets/logos/ezgas-logo.png",
+        image: ezgasLogo,
         tech: ["Python", "Flask"],
         link: "https://ezgas-5.onrender.com"
       },
@@ -80,7 +88,7 @@ function App() {
         id: 3,
         title: "SweetManager",
         description: "Aplicación en Vue.js + .NET que permite mejorar procesos de gestión administrativa a hoteles.",
-        image: "src/assets/logos/sweetmanager-logo.png",
+        image: sweetmanagerLogo,
         tech: ["Vue.js", "PrimeVue",  ".NET"],
         link: "https://sweet-manager-web-application.vercel.app/home"
       },
@@ -88,7 +96,7 @@ function App() {
         id: 4,
         title: "EcoMove",
         description: "Aplicación web para la reserva de vehículos eléctricos compartidos en áreas urbanas.",
-        image: "src/assets/logos/ecomove-logo.png",
+        image: ecomoveLogo,
         tech: ["Angular", "Spring", "Angular Material"],
         link: "https://ecogo-upc-wx64.github.io/ecomove-landing-page/"
       },
@@ -96,7 +104,7 @@ function App() {
         id: 5,
         title: "SafeVision",
         description: "Aplicación con reconocimiento visual para monitorear conductores y prevenir accidentes.",
-        image: "src/assets/logos/safevision-logo.png",
+        image: safevisionLogo,
         tech: ["Python", "OpenCV", "TensorFlow"],
         link: "#"
       }
@@ -242,7 +250,7 @@ function App() {
             </div>
           </div>
           <div className="hero-visual">
-              <img src="src\assets\avatar.png" alt="Avatar" className="avatar-image" />
+              <img src={avatarImage} alt="Avatar" className="avatar-image" />
           </div>
         </div>
       </section>
