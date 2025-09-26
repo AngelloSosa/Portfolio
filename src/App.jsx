@@ -27,12 +27,12 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 
 // Import images
-import avatarImage from './assets/avatar.png'
-import alquilafacilLogo from './assets/logos/alquilafacil-logo.png'
-import ezgasLogo from './assets/logos/ezgas-logo.png'
-import sweetmanagerLogo from './assets/logos/sweetmanager-logo.png'
-import ecomoveLogo from './assets/logos/ecomove-logo.png'
-import safevisionLogo from './assets/logos/safevision-logo.png'
+import avatarImage from '/assets/avatar.png'
+import alquilafacilLogo from '/assets/logos/alquilafacil-logo.png'
+import ezgasLogo from '/assets/logos/ezgas-logo.png'
+import sweetmanagerLogo from '/assets/logos/sweetmanager-logo.png'
+import ecomoveLogo from '/assets/logos/ecomove-logo.png'
+import safevisionLogo from '/assets/logos/safevision-logo.png'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
