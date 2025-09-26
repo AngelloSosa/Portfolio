@@ -74,7 +74,7 @@ function App() {
         description: "Una solución moderna de alquiler de espacios para eventos, construida con Vue.js y .NET",
         image: alquilafacilLogo,
         tech: ["Vue", ".NET", "Tailwind"],
-        link: "https://alquilaez.netlify.app/sign-in"
+        link: "https://alquilaez.netlify.app"
       },
       {
         id: 2,
@@ -90,7 +90,7 @@ function App() {
         description: "Aplicación en Vue.js + .NET que permite mejorar procesos de gestión administrativa a hoteles.",
         image: sweetmanagerLogo,
         tech: ["Vue.js", "PrimeVue",  ".NET"],
-        link: "https://sweet-manager-web-application.vercel.app/home"
+        link: "https://sweet-manager-web-application.vercel.app"
       },
       {
         id: 4,
@@ -361,16 +361,20 @@ function App() {
           <div className="project-image">
             <img src={project.image} alt={project.title} />
             <div className="project-overlay">
-              <button
-                className="btn btn-primary"
-                onClick={() => {
-                  if (project.link && project.link !== "#") {
-                    window.open(project.link, "_blank", "noopener,noreferrer");
-                  }
-                }}
-              >
-                Ver Proyecto
-              </button>
+              {project.link && project.link !== "#" ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Ver Proyecto
+                </a>
+              ) : (
+                <span className="btn btn-primary disabled">
+                  Ver Proyecto
+                </span>
+              )}
             </div>
           </div>
           <div className="project-content">
@@ -389,7 +393,6 @@ function App() {
     </div>
   </div>
 </section>
-
 
       {/* Contact Section */}
       <section id="contact" className="contact">
